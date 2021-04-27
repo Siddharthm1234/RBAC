@@ -2,6 +2,7 @@ package com.example.user.restTemplate;
 
 import com.example.user.web.exception.GroupServiceDownException;
 import com.example.user.web.exception.RoleNotFoundException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.stereotype.Component;
@@ -11,7 +12,13 @@ import java.io.IOException;
 
 import static org.springframework.http.HttpStatus.Series.SERVER_ERROR;
 
+/**
+ * Custom Response Handler for RestTemplate
+ *
+ * @author Siddharth Mehta
+ */
 @Component
+@Slf4j
 public class RoleRestTemplateResponseErrorHandler implements ResponseErrorHandler {
     @Override
     public boolean hasError(ClientHttpResponse httpResponse) throws IOException {
@@ -24,12 +31,12 @@ public class RoleRestTemplateResponseErrorHandler implements ResponseErrorHandle
 
         if (httpResponse.getStatusCode()
                 .series() == HttpStatus.Series.SERVER_ERROR) {
-            // handle SERVER_ERROR (Group Service Down)
+            log.error("Group Service Down!");
             throw new GroupServiceDownException("Group Service Down!");
         } else if (httpResponse.getStatusCode()
                 .series() == HttpStatus.Series.CLIENT_ERROR) {
-            // handle CLIENT_ERROR
             if (httpResponse.getStatusCode() == HttpStatus.NOT_FOUND) {
+                log.error("Invalid Role Id");
                 throw new RoleNotFoundException("Invalid Role Id");
             }
         }

@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "0004b270-da02-4f33-89a4-1b88af6a2a1a",
+		"name": "Group-Role Mapping API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Group-Role (Internal)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8765/group-roles"
+			},
+			"response": []
+		},
+		{
+			"name": "Get A Group-Role (Internal)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8765/group-roles/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Add A New Group-Role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"groupId\": 2,\n    \"roleId\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8765/group-roles"
+			},
+			"response": []
+		},
+		{
+			"name": "Update A Group-Role",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"groupRoleId\": 1,\n    \"groupId\": 3,\n    \"roleId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8765/group-roles"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete A Group-Role",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8765/group/20/role/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Roles For a Group Using GroupId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8765/groups/1/roles"
+			},
+			"response": []
+		}
+	]
+}

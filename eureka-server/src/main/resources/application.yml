@@ -1,0 +1,15 @@
+#*** Spring Application Properties ***#
+server:
+  port: 8761
+
+spring:
+  application:
+    name: naming-server
+
+#*** Eureka Server Properties ***#
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+  instance:
+    hostname: localhost

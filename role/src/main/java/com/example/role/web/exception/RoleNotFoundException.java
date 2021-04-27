@@ -1,8 +1,8 @@
 package com.example.role.web.exception;
 
-public class RoleNotFoundException extends RuntimeException{
+public class RoleNotFoundException extends RuntimeException {
 
-    public RoleNotFoundException(String message){
+    public RoleNotFoundException(String message) {
         super(message);
     }
 }

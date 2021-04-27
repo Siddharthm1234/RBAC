@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
- *Eureka Discovery Service to allow Eureka Service Registry
+ * Eureka Discovery Service to allow Eureka Service Registry
  *
  * @author Siddharth Mehta
  */

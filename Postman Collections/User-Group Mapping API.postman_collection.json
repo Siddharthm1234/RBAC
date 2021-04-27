@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "fcdd851f-2227-44b6-a74b-30eb49dfeda6",
+		"name": "User-Group Mapping API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All User-Group (Internal)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8765/user-groups/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get A User-Group (Internal)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8765/user-groups/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Add A New User-Group",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n    \"userId\": 1,\n    \"groupId\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8765/user-groups/"
+			},
+			"response": []
+		},
+		{
+			"name": "Update A User-Group",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userGroupId\": 1,\n    \"userId\": 1,\n    \"groupId\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8765/user-groups"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete A User-Group",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8765/user-groups/user/agupta/group/3"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Groups For a User Using UserName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8765/users/smehta/groups"
+			},
+			"response": []
+		}
+	]
+}

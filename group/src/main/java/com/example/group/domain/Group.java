@@ -1,6 +1,7 @@
 package com.example.group.domain;
 
 
+import com.example.group.constant.Constants;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -9,9 +10,8 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import javax.persistence.*;
 import java.sql.Timestamp;
 
-
 /**
- * Simple JavaBean domain object representing a group.
+ * Simple JavaBean domain object representing a Group.
  *
  * @author Siddharth Mehta
  */
@@ -21,7 +21,7 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "GROUP_TABLE")
+@Table(name = Constants.GROUP_TABLE_NAME)
 @EntityListeners(AuditingEntityListener.class)
 public class Group {
 

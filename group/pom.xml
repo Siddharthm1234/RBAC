@@ -102,7 +102,6 @@
     </dependencies>
 
 
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -123,7 +122,6 @@
             <url>https://repo.spring.io/milestone</url>
         </repository>
     </repositories>
-
 
 
     <build>

@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "08f56ea1-3068-46bb-8a69-7b297ffb901e",
+		"name": "Group Service API",
+		"description": "Set of API for Group Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Groups",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8765/groups"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Group By GroupId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8765/groups/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Add A New Group",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"groupName\": \"Spring Boot Developers\",\n    \"groupDescription\": \"Department that handles develops enterprise-quality Spring applications\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8765/groups"
+			},
+			"response": []
+		},
+		{
+			"name": "Update A Group Using GroupId ",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"groupId\": 1,\n    \"groupName\": \"Accounts and Finance Group\",\n    \"groupDescription\": \"Department that handles all financial issues\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8765/groups"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete A Group By GroupId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8765/groups/3"
+			},
+			"response": []
+		}
+	]
+}

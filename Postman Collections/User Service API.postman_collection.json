@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "e59e6618-1dd2-4362-8a67-06b12008d02e",
+		"name": "User Service API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8765/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By UserName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8765/users/smehta"
+			},
+			"response": []
+		},
+		{
+			"name": "Add A New User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"smehta\",\n    \"firstName\": \"Siddharth\",\n    \"lastName\": \"Mehta\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8765/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "Update A User By UserName",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\": \"smehta\",\n    \"firstName\": \"Siddharth\",\n    \"lastName\": \"Mehta\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8765/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete A User By UserName",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8765/users/agupta"
+			},
+			"response": []
+		},
+		{
+			"name": "Check If User Belongs To A Group",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8765/users/smehta/groups/9/check"
+			},
+			"response": []
+		},
+		{
+			"name": "Check If User Has Role Permission",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8765/users/smehta/roles/9/check"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Groups and Roles For A User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8765/users/smehta/group-roles"
+			},
+			"response": []
+		}
+	]
+}

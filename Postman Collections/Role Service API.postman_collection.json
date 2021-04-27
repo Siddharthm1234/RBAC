@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "5e81c492-9ece-4839-a666-402e8f6a5067",
+		"name": "Role Service API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Roles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8765/roles"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Role By RoleId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8765/roles/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Add A New Role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"roleName\": \"Monitor\",\n    \"roleDescription\": \"Monitors the functioning of all Group.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8765/roles"
+			},
+			"response": []
+		},
+		{
+			"name": "Update A Role Using RoleId",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"roleId\": 2,\n    \"roleName\": \"Design Architect\",\n    \"roleDescription\": \"Manages the database design and schema.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8765/roles"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete A Role By RoleId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8765/roles/6"
+			},
+			"response": []
+		}
+	]
+}

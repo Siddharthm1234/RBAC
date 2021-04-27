@@ -1,13 +1,24 @@
 package com.example.group.service;
 
-import com.example.group.web.model.GroupRoleMappingDto;
+import com.example.group.web.dto.requestDto.GroupRoleMappingRequestDto;
+import com.example.group.web.dto.requestDto.GroupRoleMappingUpdateRequestDto;
+import com.example.group.web.dto.responseDto.AllGroupRoleMappingsResponseDto;
+import com.example.group.web.dto.responseDto.GroupRoleMappingResponseDto;
 
-import java.util.Set;
-
+/**
+ * Interface that provides contract for GroupRole Service
+ *
+ * @author Siddharth Mehta
+ */
 public interface GroupRoleService {
-    Set<GroupRoleMappingDto> getGroupRoleMapping();
-    GroupRoleMappingDto getGroupRoleMappingById(Long groupRoleId);
-    GroupRoleMappingDto updateGroupRoleMappingById(Long groupRoleId, GroupRoleMappingDto groupRoleMappingDtoDto);
-    GroupRoleMappingDto createGroupRoleMapping(GroupRoleMappingDto groupRoleMappingDto);
-    void deleteById(Long groupRoleId);
+    AllGroupRoleMappingsResponseDto getAllGroupRoleMappings();
+
+    GroupRoleMappingResponseDto getGroupRoleMappingById(Long groupRoleId);
+
+    GroupRoleMappingResponseDto updateGroupRoleMappingById(GroupRoleMappingUpdateRequestDto groupRoleMappingUpdateRequestDto);
+
+    GroupRoleMappingResponseDto createGroupRoleMapping(GroupRoleMappingRequestDto groupRoleMappingRequestDto);
+
+    GroupRoleMappingResponseDto deleteByGroupIdAndRoleId(Long groupId, Long roleId);
+
 }

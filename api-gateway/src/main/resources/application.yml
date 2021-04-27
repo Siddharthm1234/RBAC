@@ -1,3 +1,8 @@
+#*** Spring Application Properties ***#
+server:
+  port: 8765
+
+#*** Spring Cloud Gateway Routing to remove prefix service name from all API ***#
 spring:
   application:
     name: api-gateway-service
@@ -16,3 +21,12 @@ spring:
           uri: lb://ROLE-SERVICE
           predicates:
             - Path=/roles/**
+    discovery: true
+
+eureka:
+  instance:
+    hostname: localhost
+
+#*** Spring Cloud Gateway Properties (Providing custom path) hence commented ***#
+#spring.cloud.gateway.discovery.locator.enabled=true
+#spring.cloud.gateway.discovery.locator.lower-case-service-id=true
